@@ -11,4 +11,37 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
+  <h3 class="tab-header-text">Live Video Support</h3>
+  <div id="call-connected"> Twilio Programmable Video Chat</div>
+
+  <div id="controls" width = "500px">
+      <div id="preview" style="float:left;">
+          <div id="local-media" width ="100px" ></div>
+          
+          <button id="button-preview" style="margin-left:40px;">Preview My Camera</button>
+          <button id="JoinRoom" style="margin-left:40px;" (click)="onclick" >Join the Room</button> </div> <br>
+          <button id="leave" style="margin-left:40px;">Leave the Room</button>
+          
+          
+      </div>
+      <div id="call-controls" class="call-button-div">
+          <i id="button-call" class="icon ion-ios-telephone-outline call-buttons" style="color:green;"></i>
+          <i id="button-call-end" class="icon ion-ios-telephone-outline call-buttons" style="color:red; display:none;"></i>
+          
+      </div>
+  <div id="spin-wrapper"><ion-spinner name="circles"></ion-spinner></div>
+
+  <div id="remote-media">
+      <div id="video-overlay">Inmate Name</div>
+      
+  </div>           
+  <script src="https://media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>
+  <script src="home.ts"> </script>
+  <ion-list inset>
+    <ion-item *ngFor="let user of users">
+      <h2>{{user.name}}</h2>
+      <p>{{user.email}}</p>
+    </ion-item>
+  </ion-list>
 </ion-content>
+
